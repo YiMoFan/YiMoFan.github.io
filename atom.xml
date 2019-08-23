@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-09T08:02:08.000Z</updated>
+  <updated>2019-08-23T06:24:49.916Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>newblog</title>
+    <link href="http://yoursite.com/2019/08/23/newblog/"/>
+    <id>http://yoursite.com/2019/08/23/newblog/</id>
+    <published>2019-08-23T06:21:40.688Z</published>
+    <updated>2019-08-23T06:24:49.916Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="hexo搭建的个人博客换电脑之后的部署"><a href="#hexo搭建的个人博客换电脑之后的部署" class="headerlink" title="hexo搭建的个人博客换电脑之后的部署"></a>hexo搭建的个人博客换电脑之后的部署</h2><p><strong>难啊</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;hexo搭建的个人博客换电脑之后的部署&quot;&gt;&lt;a href=&quot;#hexo搭建的个人博客换电脑之后的部署&quot; class=&quot;headerlink&quot; title=&quot;hexo搭建的个人博客换电脑之后的部署&quot;&gt;&lt;/a&gt;hexo搭建的个人博客换电脑之后的部署&lt;/h2&gt;&lt;p&gt;&lt;s
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>阈值分割</title>
