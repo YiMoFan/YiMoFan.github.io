@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>胥帆的博客</title>
+  <title>胥帆</title>
   <icon>https://www.gravatar.com/avatar/f90a8deeb07db0e48636ee95a27b26f3</icon>
   <subtitle>不善言辞，胆小认生</subtitle>
   <link href="/atom.xml" rel="self"/>
