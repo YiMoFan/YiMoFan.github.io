@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-09T08:02:08.000Z</updated>
+  <updated>2019-08-24T02:14:47.184Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://yoursite.com/2019/08/24/test/"/>
+    <id>http://yoursite.com/2019/08/24/test/</id>
+    <published>2019-08-24T02:10:02.332Z</published>
+    <updated>2019-08-24T02:14:47.184Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="new-test"><a href="#new-test" class="headerlink" title="new test"></a>new test</h2><p><strong>测试时间</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;new-test&quot;&gt;&lt;a href=&quot;#new-test&quot; class=&quot;headerlink&quot; title=&quot;new test&quot;&gt;&lt;/a&gt;new test&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;测试时间&lt;/strong&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>阈值分割</title>
