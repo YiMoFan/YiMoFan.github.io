@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>数字图像处理 | 胥帆</title>
+  <title>字符串的排列 | 胥帆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数字图像处理基础首先是读取图片文件12345clc;close;clear all;num_I = imread(&apos;pathname&apos;);imfinfo =(&apos;pathname&apos;)  % 输出图像的基本信息 其中pathname为路径名，最好为绝对路径，如果为相对路径必须让matlab的工作路径与图片路径一致。">
-<meta name="keywords" content="数字图像处理">
+  <meta name="description" content="题目描述输入一个字符串，按字典序列打印出该字符串中字符的所有排列，例如输入字符串abc，则按照字典序打印出由字符a、b、c所能排列出来的所有的字符串为 abc,acb,bac,bca,cab,cba。 输入描述 输入一个字符串，长度不超过9，(可能有字符重复)，字符只包括大小写字母。  输出描述 该字符串按照字典序的全排列">
+<meta name="keywords" content="剑指offer,java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数字图像处理">
-<meta property="og:url" content="http://yoursite.com/2019/08/23/数字图像处理/index.html">
+<meta property="og:title" content="字符串的排列">
+<meta property="og:url" content="http://yoursite.com/2020/11/03/字符串的排列/index.html">
 <meta property="og:site_name" content="胥帆">
-<meta property="og:description" content="数字图像处理基础首先是读取图片文件12345clc;close;clear all;num_I = imread(&apos;pathname&apos;);imfinfo =(&apos;pathname&apos;)  % 输出图像的基本信息 其中pathname为路径名，最好为绝对路径，如果为相对路径必须让matlab的工作路径与图片路径一致。">
+<meta property="og:description" content="题目描述输入一个字符串，按字典序列打印出该字符串中字符的所有排列，例如输入字符串abc，则按照字典序打印出由字符a、b、c所能排列出来的所有的字符串为 abc,acb,bac,bca,cab,cba。 输入描述 输入一个字符串，长度不超过9，(可能有字符重复)，字符只包括大小写字母。  输出描述 该字符串按照字典序的全排列">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-24T04:03:11.386Z">
+<meta property="og:updated_time" content="2020-11-03T10:34:14.140Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数字图像处理">
-<meta name="twitter:description" content="数字图像处理基础首先是读取图片文件12345clc;close;clear all;num_I = imread(&apos;pathname&apos;);imfinfo =(&apos;pathname&apos;)  % 输出图像的基本信息 其中pathname为路径名，最好为绝对路径，如果为相对路径必须让matlab的工作路径与图片路径一致。">
+<meta name="twitter:title" content="字符串的排列">
+<meta name="twitter:description" content="题目描述输入一个字符串，按字典序列打印出该字符串中字符的所有排列，例如输入字符串abc，则按照字典序打印出由字符a、b、c所能排列出来的所有的字符串为 abc,acb,bac,bca,cab,cba。 输入描述 输入一个字符串，长度不超过9，(可能有字符重复)，字符只包括大小写字母。  输出描述 该字符串按照字典序的全排列">
   
     <link rel="alternative" href="/atom.xml" title="胥帆" type="application/atom+xml">
   
@@ -229,14 +229,14 @@
           </div>
 		  
           <div id="js-content" class="content-ll">
-            <article id="post-数字图像处理" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-字符串的排列" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      数字图像处理
+      字符串的排列
     </h1>
   
 
@@ -254,49 +254,29 @@
 		
 		
         
-        <a href="/2019/08/23/数字图像处理/" class="archive-article-date">
-  	<time datetime="2019-08-23T05:20:32.369Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Aug 23 2019</time>
+        <a href="/2020/11/03/字符串的排列/" class="archive-article-date">
+  	<time datetime="2020-11-03T10:16:37.512Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Nov 3 2020</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="数字图像处理基础"><a href="#数字图像处理基础" class="headerlink" title="数字图像处理基础"></a>数字图像处理基础</h2><p>首先是读取图片文件<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">clc;<span class="built_in">close</span>;</span><br><span class="line"><span class="built_in">clear</span> all;</span><br><span class="line"></span><br><span class="line">num_I = imread(<span class="string">'pathname'</span>);</span><br><span class="line">imfinfo =(<span class="string">'pathname'</span>)  % 输出图像的基本信息</span><br></pre></td></tr></table></figure></p>
-<p>其中pathname为路径名，最好为绝对路径，如果为相对路径必须让matlab的工作路径与图片路径一致。</p>
+        <h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>输入一个字符串，按字典序列打印出该字符串中字符的所有排列，例如输入字符串abc，则按照字典序打印出由字符a、b、c所能排列出来的所有的字符串为</p>
+<p>abc,acb,bac,bca,cab,cba。</p>
+<h4 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h4><blockquote>
+<p>输入一个字符串，长度不超过9，(可能有字符重复)，字符只包括大小写字母。</p>
+</blockquote>
+<h4 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h4><blockquote>
+<p>该字符串按照字典序的全排列</p>
+</blockquote>
 <a id="more"></a>
-<p>然后就会的得到图像的图像矩阵，格式为uint8<br>如果为rgb图像就会是一个三维的矩阵，灰度图就是一个一维的图像矩阵。<br>所以只需要对图像的数字矩阵处理。</p>
-<p>比如简单的将图像分割为四个部分</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">clc;close;</span><br><span class="line">clear all;</span><br><span class="line">num = imread(<span class="string">'cameraman.tif'</span>);</span><br><span class="line">[row,col] = <span class="built_in">size</span>(num);  <span class="comment">% 提取矩阵的行和列</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ii = <span class="number">1</span>:<span class="number">2</span></span><br><span class="line">    <span class="keyword">for</span> jj = <span class="number">1</span>:<span class="number">2</span></span><br><span class="line">        <span class="comment">% 将图片分割成四部分组成一个元胞数组</span></span><br><span class="line">        image&#123;ii,jj&#125;=num((ii<span class="number">-1</span>)*col/<span class="number">2</span>+<span class="number">1</span>:ii*col/<span class="number">2</span>,(jj<span class="number">-1</span>)*col/<span class="number">2</span>+<span class="number">1</span>:jj*col/<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">figure</span>(<span class="number">1</span>);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>);imshow(image&#123;<span class="number">1</span>,<span class="number">1</span>&#125;);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>);imshow(image&#123;<span class="number">1</span>,<span class="number">2</span>&#125;);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>);imshow(image&#123;<span class="number">2</span>,<span class="number">1</span>&#125;);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">4</span>);imshow(image&#123;<span class="number">2</span>,<span class="number">2</span>&#125;);</span><br></pre></td></tr></table></figure>
-<p>基本的方法就是将原图像矩阵分割成相同大小的四个子矩阵。</p>
-<p>还有图像的加减乘除运算：<br><figure class="highlight tp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Z</span>=imadd(<span class="keyword">X</span>,<span class="keyword">Y</span>);  %图像的加运算，<span class="keyword">X</span>,<span class="keyword">Y</span>是输入的两幅图像，其中一个可以是常数</span><br><span class="line"><span class="keyword">Z</span>=imsubtract(<span class="keyword">X</span>,<span class="keyword">Y</span>);  %图像的减运算，<span class="keyword">Y</span>可以是常数</span><br><span class="line"><span class="keyword">Z</span>=immiltiply(<span class="keyword">X</span>,y);  %图像的乘运算，<span class="keyword">Y</span>也可以是常数</span><br><span class="line"><span class="keyword">Z</span>=imdivide(<span class="keyword">X</span>,y);  %图像的除运算，<span class="keyword">Y</span>也可以是常数</span><br></pre></td></tr></table></figure></p>
-<p>图像的输出为：<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imshow(<span class="built_in">image</span>);  % <span class="built_in">image</span> 为图像矩阵</span><br></pre></td></tr></table></figure></p>
-<p>然后就是图像类型格式转换的一些函数，主要的作用就是改变图像的格式，可以对图像矩阵进行处理。</p>
-<p>常用的有：<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I=rgb2gray(RGB)%将一副灰度图转换为真彩色图</span><br><span class="line">[X,map]=rgb2ind(RGB,n)%将RGB图转换为索引色图</span><br><span class="line">BW=im2bw(I,level)%将真彩色图或灰度图转换为二值图，level为阈值</span><br></pre></td></tr></table></figure></p>
-<p>因为现阶段的图像处理一般都是对灰度图像的处理，所以一般都会用到<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">image</span> = rgb2gray(I)<span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
-<p>然后统计图像的灰度值的分布称为直方图<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imhist<span class="comment">(img)</span>; <span class="meta">%</span> img 为矩阵图像的灰度值</span><br></pre></td></tr></table></figure></p>
-<p>二值化图像就是图像矩阵中只有0和1两个元素，称为逻辑矩阵。<br>将一个图片转换为二值化图片的过程为图像二值化，确定阈值的方法为阈值分割。</p>
-<p>介绍一种常用的方法为：<strong>otsu阈值分割算法</strong></p>
-<blockquote>
-<p>对图像I(x,y)，前景和背景的分割阈值记作T，<br>前景像素点数占整幅图像的比例为ω0，其平均灰度μ0；<br>背景像素点数占整幅图像的比例为ω1，其平均灰度μ1；<br>图像的总平均灰度记为μ=ω0∗μ0 +ω1∗μ1；<br>类间方差记为g。<br>假设：<br>背景较暗，且图像的大小为M×N，<br>图像中，<br>像素灰度值小于阈值T的像素个数记作N0，<br>像素灰度值大于阈值T的像素个数记作N1，<br>则有：</p>
-</blockquote>
-<p>　　　　　　ω0 = N0 / M×N ；      (1)</p>
-<p>　　　　　　ω1 = N1 / M×N ；      (2)</p>
-<p>　　　　　　N0 + N1 = M×N ；       (3)</p>
-<p>　　　　　　ω0+ω1=1；           (4)</p>
-<p>　　　　　　μ=ω0<em>μ0+ω1</em>μ1；  (5)</p>
-<p>　　　　　　g =ω0(μ0-μ)^2+ω1(μ1-μ)^2；(6)</p>
-<blockquote>
-<p>将式(5)代入式(6),得到等价公式:</p>
-</blockquote>
-<p>　　　　　　g=ω0<em>ω1</em>(μ0-μ1)^2; 　(7)　这就是类间方差</p>
-<blockquote>
-<p>采用遍历的方法得到使类间方差g最大的阈值T,即为所求。</p>
-</blockquote>
-<p>在matlab中有一个函数可以直接运行：<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">I = imread('chepai.jpg')<span class="comment">;</span></span><br><span class="line">I = rgb2gray(<span class="name">I</span>)<span class="comment">;</span></span><br><span class="line">T2 = graythresh(<span class="name">I</span>)<span class="comment">;</span></span><br><span class="line">num2 = im2bw(<span class="name">I</span>,T2)<span class="comment">;</span></span><br><span class="line">imshow(<span class="name">num2</span>)</span><br></pre></td></tr></table></figure></p>
-<h2 id="数学建模"><a href="#数学建模" class="headerlink" title="数学建模"></a>数学建模</h2><blockquote>
-<p>1、数学建模的重要性，能参加的最好参加一下，涉及的知识面很广，提高眼界。<br>2、队友，不一定非要求理学院，计算机学院，经济学院<br>3、心态很重要。</p>
-</blockquote>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>这种从固定的数组/String中取出元素进行排列组合，是经典的permutation问题，只是本题的要求是需要返回所有不重复的排列组合，而不是返回多少种情况，所以需要新建一个String的ArrayList来储存所有排列出的不重复的字符串。</p>
+<p>基本思想是采用递归从字符串中不断选取某个字符来进行匹配。</p>
+<p>定义一个方法：用于递归的循环的向下寻找所有可能的排列组合，其中有三个参数。</p>
+<p>第一个str为当前剩下的可以取的String，第二个是cur，为当前所组合的字符串，第三个是res，为符合条件的字符串的合集。</p>
+<p>递归结束条件为：当前剩下的String长度为0时表示所有字符已经取完，此时的cur为排列出的一种情况，若res中没有则加入res。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*; <span class="comment">//键盘扫描类</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Perm</span><span class="params">(String str, String cur, ArrayList&lt;String&gt; res)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (str.length() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!res.contains(cur)) &#123;</span><br><span class="line">                res.add(cur);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; str.length(); ++i) &#123;</span><br><span class="line">            Perm(str.substring(<span class="number">0</span>,i)+str.substring(i+<span class="number">1</span>),cur+str.charAt(i),res);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;String&gt; <span class="title">Permutation</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        StringBuffer stringBuffer = <span class="keyword">new</span> StringBuffer(str);</span><br><span class="line">        ArrayList&lt;String&gt; res = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; stringBuffer.length();) &#123;</span><br><span class="line">            <span class="keyword">if</span> ( !(stringBuffer.charAt(i) &lt;= <span class="string">'z'</span> &amp;&amp; stringBuffer.charAt(i) &gt;= <span class="string">'A'</span>)) &#123;</span><br><span class="line">                stringBuffer.deleteCharAt(i);</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            ++i;</span><br><span class="line">        &#125;</span><br><span class="line">        str = stringBuffer.toString();</span><br><span class="line">        <span class="keyword">if</span> (str.length() == <span class="number">0</span>) <span class="keyword">return</span> res;</span><br><span class="line">        Perm(str,<span class="string">""</span>,res);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String arg[])</span> </span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String str = input.next();</span><br><span class="line">        Solution solution = <span class="keyword">new</span> Solution();</span><br><span class="line">        System.out.print(solution.Permutation(str));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -317,7 +297,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数字图像处理</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
@@ -373,7 +357,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/23/数字图像处理/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/11/03/字符串的排列/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -387,18 +371,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/23/数学建模国赛/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数学建模国赛
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/23/MyResume/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的简历</div>
+    <a href="/2020/11/01/顺时针打印矩阵/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">顺时针打印矩阵</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -425,7 +400,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数字图像处理基础"><span class="toc-number">1.</span> <span class="toc-text">数字图像处理基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学建模"><span class="toc-number">2.</span> <span class="toc-text">数学建模</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输入描述"><span class="toc-number">2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出描述"><span class="toc-number">3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#题解"><span class="toc-number">4.</span> <span class="toc-text">题解</span></a></li></ol>
                     </div>
                 </span>
             </div>
