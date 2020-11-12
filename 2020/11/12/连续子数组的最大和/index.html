@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>回文数（java） | 胥帆</title>
+  <title>连续子数组的最大和 | 胥帆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="牛客练习赛71，题一： 题目描述">
-<meta name="keywords" content="java">
+  <meta name="description" content="题目描述HZ偶尔会拿些专业问题来忽悠那些非计算机专业的同学。今天测试组开完会后,他又发话了:在古老的一维模式识别中,常常需要计算连续子向量的最大和,当向量全为正数的时候,问题很好解决。但是,如果向量中包含负数,是否应该包含某个负数,并期望旁边的正数会弥补它呢？例如:{6,-3,-2,7,-15,1,2,2},连续子向量的最大和为8(从第0个开始,到第3个为止)。给一个数组，返回它的最大连续子序列的">
+<meta name="keywords" content="dp,剑指offer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="回文数（java）">
-<meta property="og:url" content="http://yoursite.com/2020/10/10/回文数（java）/index.html">
+<meta property="og:title" content="连续子数组的最大和">
+<meta property="og:url" content="http://yoursite.com/2020/11/12/连续子数组的最大和/index.html">
 <meta property="og:site_name" content="胥帆">
-<meta property="og:description" content="牛客练习赛71，题一： 题目描述">
+<meta property="og:description" content="题目描述HZ偶尔会拿些专业问题来忽悠那些非计算机专业的同学。今天测试组开完会后,他又发话了:在古老的一维模式识别中,常常需要计算连续子向量的最大和,当向量全为正数的时候,问题很好解决。但是,如果向量中包含负数,是否应该包含某个负数,并期望旁边的正数会弥补它呢？例如:{6,-3,-2,7,-15,1,2,2},连续子向量的最大和为8(从第0个开始,到第3个为止)。给一个数组，返回它的最大连续子序列的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2020/10/10/回文数（java）/one.png">
-<meta property="og:updated_time" content="2020-10-10T04:35:25.043Z">
+<meta property="og:updated_time" content="2020-11-12T11:58:41.169Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="回文数（java）">
-<meta name="twitter:description" content="牛客练习赛71，题一： 题目描述">
-<meta name="twitter:image" content="http://yoursite.com/2020/10/10/回文数（java）/one.png">
+<meta name="twitter:title" content="连续子数组的最大和">
+<meta name="twitter:description" content="题目描述HZ偶尔会拿些专业问题来忽悠那些非计算机专业的同学。今天测试组开完会后,他又发话了:在古老的一维模式识别中,常常需要计算连续子向量的最大和,当向量全为正数的时候,问题很好解决。但是,如果向量中包含负数,是否应该包含某个负数,并期望旁边的正数会弥补它呢？例如:{6,-3,-2,7,-15,1,2,2},连续子向量的最大和为8(从第0个开始,到第3个为止)。给一个数组，返回它的最大连续子序列的">
   
     <link rel="alternative" href="/atom.xml" title="胥帆" type="application/atom+xml">
   
@@ -231,14 +229,14 @@
           </div>
 		  
           <div id="js-content" class="content-ll">
-            <article id="post-回文数（java）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-连续子数组的最大和" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      回文数（java）
+      连续子数组的最大和
     </h1>
   
 
@@ -256,48 +254,35 @@
 		
 		
         
-        <a href="/2020/10/10/回文数（java）/" class="archive-article-date">
-  	<time datetime="2020-10-10T03:04:41.737Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Oct 10 2020</time>
+        <a href="/2020/11/12/连续子数组的最大和/" class="archive-article-date">
+  	<time datetime="2020-11-12T11:35:45.250Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Nov 12 2020</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>牛客练习赛71，题一：</p>
-<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p><img src="/2020/10/10/回文数（java）/one.png" alt="题目描述"></p>
-<a id="more"></a>
-<h4 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h4><blockquote>
-<p>一行10个自然数，分别表示数码0~9的出现次数</p>
-</blockquote>
-<h4 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h4><blockquote>
-<p>如果无解，只输出”-1”（不含引号）</p>
-<p>否则，输出一个数表示最小的解</p>
-</blockquote>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><blockquote>
-<p>输入</p>
-<p>0 2 4 2 0 2 0 0 0 0</p>
-<p>输出</p>
-<p>1223553221</p>
-</blockquote>
-<blockquote>
-<p>1 1 4 5 1 4 0 0 0 0</p>
-<p>-1</p>
-</blockquote>
-<blockquote>
-<p>4 0 2 3 0 0 0 2 0 0</p>
-<p>20037373002</p>
-</blockquote>
-<blockquote>
-<p>2 0 0 0 0 0 0 0 0 1</p>
-<p>-1</p>
-</blockquote>
-<blockquote>
-<p>1 0 0 0 0 0 0 0 0 0</p>
-<p>0</p>
-</blockquote>
-<p>备注： 保证输入的所有数都不超过10，且至少一个数大于0；</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">11</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; ++i) &#123;</span><br><span class="line">            arr[i] = sc.nextInt();</span><br><span class="line">        &#125;</span><br><span class="line">        Main.solution(arr);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//        for(int n : arr) &#123;</span></span><br><span class="line"><span class="comment">//            System.out.print(n + (n == arr[arr.length-1] ? "\n": " "));</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//        System.out.println(arr.toString());</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> odd_count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> n : arr) &#123;</span><br><span class="line">            sum += n;</span><br><span class="line">            <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">1</span>) odd_count++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (odd_count&gt;<span class="number">1</span>) System.out.print(<span class="string">"-1"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> ((sum-arr[<span class="number">1</span>])==<span class="number">1</span> &amp;&amp; arr[<span class="number">1</span>] != <span class="number">0</span>) System.out.print(<span class="string">"-1"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">            String end = <span class="string">""</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; ++i) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[i] % <span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">                    end = String.valueOf(i - <span class="number">1</span>);</span><br><span class="line">                    arr[i]--;</span><br><span class="line">                &#125;</span><br><span class="line">                arr[i] &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= <span class="number">10</span>; ++i) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                    sb.append(String.valueOf(i - <span class="number">1</span>));</span><br><span class="line">                    arr[i]--;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; ++i) &#123;</span><br><span class="line">                <span class="keyword">while</span> (arr[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                    sb.append(String.valueOf(i - <span class="number">1</span>));</span><br><span class="line">                    arr[i]--;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.print(sb + end + sb.reverse());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>HZ偶尔会拿些专业问题来忽悠那些非计算机专业的同学。今天测试组开完会后,他又发话了:在古老的一维模式识别中,常常需要计算连续子向量的最大和,当向量全为正数的时候,问题很好解决。但是,如果向量中包含负数,是否应该包含某个负数,并期望旁边的正数会弥补它呢？例如:{6,-3,-2,7,-15,1,2,2},连续子向量的最大和为8(从第0个开始,到第3个为止)。给一个数组，返回它的最大连续子序列的和，你会不会被他忽悠住？(子向量的长度至少是1) </p>
+<h4 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h4><p>[1,-2,3,10,-4,7,2,-5]</p>
+<h4 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h4><p>18</p>
+<a id="more"></a> 
+<h5 id="方法一-动态规划"><a href="#方法一-动态规划" class="headerlink" title="方法一 动态规划"></a>方法一 动态规划</h5><p>状态定义：dp[i]表示以i结尾的连续子数组的最大和。所以最终要求dp[n-1] </p>
+<p>状态转移方程：dp[i] = max(array[i], dp[i-1]+array[i]) </p>
+<p>解释：如果当前元素为整数，并且dp[i-1]为负数，那么当然结果就是只选当前元素 </p>
+<p>技巧：这里为了统一代码的书写，定义dp[i]表示前i个元素的连续子数组的最大和，结尾元素为array[i-1] </p>
+<p>时间复杂度：O(n)</p>
+<p>空间复杂度：O(n)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">FindGreatestSumOfSubArray</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="built_in">array</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sz = <span class="built_in">array</span>.size();</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; dp(sz+<span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">0</span>; <span class="comment">// 表示没有元素</span></span><br><span class="line">        <span class="keyword">int</span> ret = <span class="built_in">array</span>[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=sz; ++i) &#123;</span><br><span class="line">            dp[i] = max(<span class="built_in">array</span>[i<span class="number">-1</span>], dp[i<span class="number">-1</span>]+<span class="built_in">array</span>[i<span class="number">-1</span>]);</span><br><span class="line">            ret = max(ret, dp[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">FindGreatestSumOfSubArray</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> maxNum = -<span class="number">999999</span>;</span><br><span class="line">        <span class="keyword">int</span> res = -<span class="number">999999</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; ++i) &#123;</span><br><span class="line">            maxNum = array[i] &gt; array[i] + maxNum ? array[i] : array[i] + maxNum;</span><br><span class="line">            res = res &gt; maxNum ? res : maxNum;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><p>思想很简单，就是对下标为i的元素array[i]，先试探的加上array[i], 如果和为负数，显然，以i结尾的元素对整个结果不作贡献。<br>具体过程：</p>
+<ol>
+<li>初始化：维护一个变量tmp = 0</li>
+<li>如果tmp+array[i] &lt; 0, 说明以i结尾的不作贡献，重新赋值tmp = 0</li>
+<li>否则更新tmp = tmp + array[i]<br>最后判断tmp是否等于0， 如果等于0， 说明数组都是负数，选取一个最大值为答案。</li>
+</ol>
+<p>时间复杂度：O(n)</p>
+<p>空间复杂度：O(1)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">FindGreatestSumOfSubArray</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="built_in">array</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ret = <span class="built_in">array</span>[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> tmp = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">const</span> <span class="keyword">int</span> k : <span class="built_in">array</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (tmp + k &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                tmp = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                tmp += k;</span><br><span class="line">            &#125;</span><br><span class="line">            ret = max(ret, tmp);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (tmp != <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> ret;</span><br><span class="line">        <span class="keyword">return</span> *max_element(<span class="built_in">array</span>.begin(), <span class="built_in">array</span>.end());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -318,7 +303,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">dp</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
         		</li>
       		
 		</ul>
@@ -374,7 +363,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/10/回文数（java）/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/11/12/连续子数组的最大和/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -388,18 +377,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/11/01/顺时针打印矩阵/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          顺时针打印矩阵
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/09/29/链表操作-java/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">链表操作(java)</div>
+    <a href="/2020/11/09/数组中出现次数超过一半的数字/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数组中出现次数超过一半的数字</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -426,7 +406,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输入描述"><span class="toc-number">2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出描述"><span class="toc-number">3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#实例"><span class="toc-number">4.</span> <span class="toc-text">实例</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输入描述"><span class="toc-number">2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出描述"><span class="toc-number">3.</span> <span class="toc-text">输出描述</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#方法一-动态规划"><span class="toc-number">3.1.</span> <span class="toc-text">方法一 动态规划</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#方法二"><span class="toc-number">3.2.</span> <span class="toc-text">方法二</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
