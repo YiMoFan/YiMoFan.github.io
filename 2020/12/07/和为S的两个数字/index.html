@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>回文数（java） | 胥帆</title>
+  <title>和为S的两个数字 | 胥帆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="牛客练习赛71，题一： 题目描述">
-<meta name="keywords" content="java">
+  <meta name="description" content="题目描述输入一个递增排序的数组和一个数字S，在数组中查找两个数，使得他们的和正好是S，如果有多对数字的和等于S，输出两个数的乘积最小的。 输入描述一个递增排序的数组和一个数字S  [1,2,4,7,11,15],15  输出描述数字和等于S 的两个数，输出两个数，小的先输出。  [4,11]">
+<meta name="keywords" content="剑指offer,java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="回文数（java）">
-<meta property="og:url" content="http://yoursite.com/2020/10/10/回文数（java）/index.html">
+<meta property="og:title" content="和为S的两个数字">
+<meta property="og:url" content="http://yoursite.com/2020/12/07/和为S的两个数字/index.html">
 <meta property="og:site_name" content="胥帆">
-<meta property="og:description" content="牛客练习赛71，题一： 题目描述">
+<meta property="og:description" content="题目描述输入一个递增排序的数组和一个数字S，在数组中查找两个数，使得他们的和正好是S，如果有多对数字的和等于S，输出两个数的乘积最小的。 输入描述一个递增排序的数组和一个数字S  [1,2,4,7,11,15],15  输出描述数字和等于S 的两个数，输出两个数，小的先输出。  [4,11]">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2020/10/10/回文数（java）/one.png">
-<meta property="og:updated_time" content="2020-10-10T04:35:25.043Z">
+<meta property="og:updated_time" content="2020-12-07T12:43:36.067Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="回文数（java）">
-<meta name="twitter:description" content="牛客练习赛71，题一： 题目描述">
-<meta name="twitter:image" content="http://yoursite.com/2020/10/10/回文数（java）/one.png">
+<meta name="twitter:title" content="和为S的两个数字">
+<meta name="twitter:description" content="题目描述输入一个递增排序的数组和一个数字S，在数组中查找两个数，使得他们的和正好是S，如果有多对数字的和等于S，输出两个数的乘积最小的。 输入描述一个递增排序的数组和一个数字S  [1,2,4,7,11,15],15  输出描述数字和等于S 的两个数，输出两个数，小的先输出。  [4,11]">
   
     <link rel="alternative" href="/atom.xml" title="胥帆" type="application/atom+xml">
   
@@ -231,14 +229,14 @@
           </div>
 		  
           <div id="js-content" class="content-ll">
-            <article id="post-回文数（java）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-和为S的两个数字" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      回文数（java）
+      和为S的两个数字
     </h1>
   
 
@@ -256,48 +254,33 @@
 		
 		
         
-        <a href="/2020/10/10/回文数（java）/" class="archive-article-date">
-  	<time datetime="2020-10-10T03:04:41.737Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Oct 10 2020</time>
+        <a href="/2020/12/07/和为S的两个数字/" class="archive-article-date">
+  	<time datetime="2020-12-07T12:20:27.224Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Dec 7 2020</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>牛客练习赛71，题一：</p>
-<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p><img src="/2020/10/10/回文数（java）/one.png" alt="题目描述"></p>
+        <h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>输入一个递增排序的数组和一个数字S，在数组中查找两个数，使得他们的和正好是S，如果有多对数字的和等于S，输出两个数的乘积最小的。</p>
+<h4 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h4><p>一个递增排序的数组和一个数字S</p>
+<blockquote>
+<p>[1,2,4,7,11,15],15</p>
+</blockquote>
+<h4 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h4><p>数字和等于S 的两个数，输出两个数，小的先输出。</p>
+<blockquote>
+<p>[4,11]</p>
+</blockquote>
 <a id="more"></a>
-<h4 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h4><blockquote>
-<p>一行10个自然数，分别表示数码0~9的出现次数</p>
-</blockquote>
-<h4 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h4><blockquote>
-<p>如果无解，只输出”-1”（不含引号）</p>
-<p>否则，输出一个数表示最小的解</p>
-</blockquote>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><blockquote>
-<p>输入</p>
-<p>0 2 4 2 0 2 0 0 0 0</p>
-<p>输出</p>
-<p>1223553221</p>
-</blockquote>
-<blockquote>
-<p>1 1 4 5 1 4 0 0 0 0</p>
-<p>-1</p>
-</blockquote>
-<blockquote>
-<p>4 0 2 3 0 0 0 2 0 0</p>
-<p>20037373002</p>
-</blockquote>
-<blockquote>
-<p>2 0 0 0 0 0 0 0 0 1</p>
-<p>-1</p>
-</blockquote>
-<blockquote>
-<p>1 0 0 0 0 0 0 0 0 0</p>
-<p>0</p>
-</blockquote>
-<p>备注： 保证输入的所有数都不超过10，且至少一个数大于0；</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">11</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; ++i) &#123;</span><br><span class="line">            arr[i] = sc.nextInt();</span><br><span class="line">        &#125;</span><br><span class="line">        Main.solution(arr);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//        for(int n : arr) &#123;</span></span><br><span class="line"><span class="comment">//            System.out.print(n + (n == arr[arr.length-1] ? "\n": " "));</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//        System.out.println(arr.toString());</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> odd_count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> n : arr) &#123;</span><br><span class="line">            sum += n;</span><br><span class="line">            <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">1</span>) odd_count++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (odd_count&gt;<span class="number">1</span>) System.out.print(<span class="string">"-1"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> ((sum-arr[<span class="number">1</span>])==<span class="number">1</span> &amp;&amp; arr[<span class="number">1</span>] != <span class="number">0</span>) System.out.print(<span class="string">"-1"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">            String end = <span class="string">""</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; ++i) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[i] % <span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">                    end = String.valueOf(i - <span class="number">1</span>);</span><br><span class="line">                    arr[i]--;</span><br><span class="line">                &#125;</span><br><span class="line">                arr[i] &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= <span class="number">10</span>; ++i) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                    sb.append(String.valueOf(i - <span class="number">1</span>));</span><br><span class="line">                    arr[i]--;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; ++i) &#123;</span><br><span class="line">                <span class="keyword">while</span> (arr[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                    sb.append(String.valueOf(i - <span class="number">1</span>));</span><br><span class="line">                    arr[i]--;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.print(sb + end + sb.reverse());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p><strong>方法一：双指针</strong></p>
+<p>因为数组是有序的，所以可以用双指针，指向数组的首尾，具体步骤如下：</p>
+<p>1，初始化：指针low指向数组首，指针high指向数组尾部。</p>
+<p>2，如果arr[low] + arr[high] == sum，说明可能是解，判断是否乘积最小。</p>
+<p>3，如果arr[low] + arr[high] &lt; sum，说明和太小，所以应该low++。</p>
+<p>4，如果arr[low] + arr[high]  &gt; sum，说明和太大，所以应该high–。</p>
+<p><strong>时间复杂度：</strong>O(n)</p>
+<p><strong>空间复杂度：</strong>O(1)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Solution;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Array;</span><br><span class="line"><span class="keyword">import</span> java.util.*; <span class="comment">//键盘扫描类</span></span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">FindNumbersWithSum</span><span class="params">(<span class="keyword">int</span> [] array,<span class="keyword">int</span> sum)</span> </span>&#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; arrayList = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> maxFlag = <span class="number">9999999</span>;</span><br><span class="line">        <span class="keyword">int</span> low = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> high = array.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (low &lt; high) &#123;</span><br><span class="line">            <span class="keyword">if</span> (array[low] + array[high] == sum) &#123;</span><br><span class="line">                <span class="keyword">if</span> (array[low] * array[high] &lt; maxFlag) &#123;</span><br><span class="line">                    arrayList.clear();</span><br><span class="line">                    arrayList.add(array[low]);</span><br><span class="line">                    arrayList.add(array[high]);</span><br><span class="line">                    maxFlag = array[low] * array[high];</span><br><span class="line">                &#125;</span><br><span class="line">                low++;</span><br><span class="line">                high--;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (array[low] + array[high] &lt; sum) &#123;</span><br><span class="line">                low++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                high--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> arrayList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String arg[])</span> </span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> n,k;</span><br><span class="line">        n = input.nextInt();</span><br><span class="line">        k = input.nextInt();</span><br><span class="line">        <span class="keyword">int</span> [] arr = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; n; ++i) &#123;</span><br><span class="line">            arr[i] = input.nextInt();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Solution solution = <span class="keyword">new</span> Solution();</span><br><span class="line"></span><br><span class="line">        System.out.print(solution.FindNumbersWithSum(arr,k));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -317,6 +300,10 @@
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
+        		</li>
+      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
@@ -374,7 +361,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/10/回文数（java）/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/12/07/和为S的两个数字/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -388,18 +375,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/11/01/顺时针打印矩阵/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          顺时针打印矩阵
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/09/29/链表操作-java/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">链表操作(java)</div>
+    <a href="/2020/12/05/数字在升序数组中出现的次数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数字在升序数组中出现的次数</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -426,7 +404,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输入描述"><span class="toc-number">2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出描述"><span class="toc-number">3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#实例"><span class="toc-number">4.</span> <span class="toc-text">实例</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输入描述"><span class="toc-number">2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出描述"><span class="toc-number">3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#题解"><span class="toc-number">4.</span> <span class="toc-text">题解</span></a></li></ol>
                     </div>
                 </span>
             </div>
