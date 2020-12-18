@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | 胥帆</title>
+  <title>翻转单词顺序列 | 胥帆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Life forces me to work hard">
-<meta name="keywords" content="胥帆，胥帆的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="胥帆">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="题目描述牛客最近来了一个新员工Fish，每天早晨总是会拿着一本英文杂志，写些句子在本子上。同事Cat对Fish写的内容颇感兴趣，有一天他向Fish借来翻看，但却读不懂它的意思。例如，“student. a am I”。后来才意识到，这家伙原来把句子单词的顺序翻转了，正确的句子应该是“I am a student.”。Cat对一一的翻转这些单词顺序可不在行，你能帮助他么？ 输入描述一个反序的字符串">
+<meta name="keywords" content="剑指offer,java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="翻转单词顺序列">
+<meta property="og:url" content="http://yoursite.com/2020/12/18/翻转单词顺序列/index.html">
 <meta property="og:site_name" content="胥帆">
-<meta property="og:description" content="Life forces me to work hard">
+<meta property="og:description" content="题目描述牛客最近来了一个新员工Fish，每天早晨总是会拿着一本英文杂志，写些句子在本子上。同事Cat对Fish写的内容颇感兴趣，有一天他向Fish借来翻看，但却读不懂它的意思。例如，“student. a am I”。后来才意识到，这家伙原来把句子单词的顺序翻转了，正确的句子应该是“I am a student.”。Cat对一一的翻转这些单词顺序可不在行，你能帮助他么？ 输入描述一个反序的字符串">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-12-18T08:30:19.782Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="胥帆">
-<meta name="twitter:description" content="Life forces me to work hard">
+<meta name="twitter:title" content="翻转单词顺序列">
+<meta name="twitter:description" content="题目描述牛客最近来了一个新员工Fish，每天早晨总是会拿着一本英文杂志，写些句子在本子上。同事Cat对Fish写的内容颇感兴趣，有一天他向Fish借来翻看，但却读不懂它的意思。例如，“student. a am I”。后来才意识到，这家伙原来把句子单词的顺序翻转了，正确的句子应该是“I am a student.”。Cat对一一的翻转这些单词顺序可不在行，你能帮助他么？ 输入描述一个反序的字符串">
   
     <link rel="alternative" href="/atom.xml" title="胥帆" type="application/atom+xml">
   
@@ -228,36 +229,71 @@
           </div>
 		  
           <div id="js-content" class="content-ll">
-            
+            <article id="post-翻转单词顺序列" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      翻转单词顺序列
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/18/翻转单词顺序列/" class="archive-article-date">
+
+		
+		<!--显示阅读次数-->
+		
+			<br/>
+			<a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+			<span class="icon-sort"></span>
+			<span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+					阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+			</span>
+			</a>
+			
+		
+		
+        
+        <a href="/2020/12/18/翻转单词顺序列/" class="archive-article-date">
   	<time datetime="2020-12-18T08:20:42.549Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Dec 18 2020</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/18/翻转单词顺序列/">翻转单词顺序列</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>牛客最近来了一个新员工Fish，每天早晨总是会拿着一本英文杂志，写些句子在本子上。同事Cat对Fish写的内容颇感兴趣，有一天他向Fish借来翻看，但却读不懂它的意思。例如，“student. a am I”。后来才意识到，这家伙原来把句子单词的顺序翻转了，正确的句子应该是“I am a student.”。Cat对一一的翻转这些单词顺序可不在行，你能帮助他么？</p>
+<h4 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h4><p>一个反序的字符串</p>
+<blockquote>
+<p>nowcoder. a am I</p>
+</blockquote>
+<h4 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h4><p>翻转单词之后的字符串</p>
+<blockquote>
+<p>I am a nowcoder.</p>
+</blockquote>
+<a id="more"></a>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>定义两个指针，i 和 end ，分别表示一个单词第一个字母所处的下标，和最后一个字母所处的下标，</p>
+<p>i从字符串的最后往前遍历，当i遇到空格时表示一个单词的开始，输出i到end的单词，</p>
+<p>然后更新end为i，i继续往前遍历，当i==0时表示字符串遍历结束。</p>
+<p>中间需要考虑空格的加入，</p>
+<p><strong>时间复杂度</strong>：O(N)</p>
+<p><strong>空间复杂度</strong>：O(N)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Solution;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*; <span class="comment">//键盘扫描类</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"><span class="comment">//    private static BufferedReader input = new BufferedReader(new InputStreamReader(System.in));</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">ReverseSentence</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> end = str.length();</span><br><span class="line">        StringBuffer ans = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = str.length()-<span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (str.charAt(i) == <span class="string">' '</span> || i == <span class="number">0</span>) &#123;</span><br><span class="line">                ans.append(end == str.length() ? <span class="string">""</span> : <span class="string">" "</span>);</span><br><span class="line">                ans.append(str.substring(i == <span class="number">0</span> ? i : i+<span class="number">1</span>,end));</span><br><span class="line">                end = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans.toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        String str = input.nextLine();</span><br><span class="line">        System.out.println(Main.ReverseSentence(str));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+      
+
+        
+        
+			<div class="declare" hidden="hidden"></div>
+			
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -273,392 +309,145 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/12/18/翻转单词顺序列/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/10/PAT-Basic-Level-Practice-中文/" class="archive-article-date">
-  	<time datetime="2020-12-10T06:31:06.464Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Dec 10 2020</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/10/PAT-Basic-Level-Practice-中文/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PAT(Basic Level)Practice(中文)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/10/PAT-Basic-Level-Practice-中文/">PAT(Basic Level)Practice(中文)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PAT</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输入描述"><span class="toc-number">2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出描述"><span class="toc-number">3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#题解"><span class="toc-number">4.</span> <span class="toc-text">题解</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/07/和为S的两个数字/" class="archive-article-date">
-  	<time datetime="2020-12-07T12:20:27.224Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Dec 7 2020</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/07/和为S的两个数字/">和为S的两个数字</a>
-    </h1>
+  
+<section id="comments" class="comments">
+  <style>
+    .comments{margin:30px;padding:10px;background:#fff}
+    @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+  </style>
+  <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'true' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "S71IPrgGzFoG8YlSrI9mVJ3P-gzGzoHsz",
+            app_key: "RwEzOyI0wOjfJB6gkIMVsljr",
+            placeholder: "",
+            avatar:"mm"
+        });
+    }
+</script>
+  </section>
+
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/05/数字在升序数组中出现的次数/" class="archive-article-date">
-  	<time datetime="2020-12-05T07:44:22.898Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Dec 5 2020</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/05/数字在升序数组中出现的次数/">数字在升序数组中出现的次数</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/03/第一个只出现一次的字符/" class="archive-article-date">
-  	<time datetime="2020-12-03T08:36:48.758Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Dec 3 2020</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/03/第一个只出现一次的字符/">第一个只出现一次的字符</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/26/把数组排成最小的数/" class="archive-article-date">
-  	<time datetime="2020-11-26T07:59:16.617Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Nov 26 2020</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/26/把数组排成最小的数/">把数组排成最小的数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/12/连续子数组的最大和/" class="archive-article-date">
-  	<time datetime="2020-11-12T11:35:45.250Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Nov 12 2020</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/12/连续子数组的最大和/">连续子数组的最大和</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">dp</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-new">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/09/数组中出现次数超过一半的数字/" class="archive-article-date">
-  	<time datetime="2020-11-09T08:44:24.319Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Nov 9 2020</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/09/数组中出现次数超过一半的数字/">数组中出现次数超过一半的数字</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/03/字符串的排列/" class="archive-article-date">
-  	<time datetime="2020-11-03T10:16:37.512Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Nov 3 2020</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/03/字符串的排列/">字符串的排列</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/01/顺时针打印矩阵/" class="archive-article-date">
-  	<time datetime="2020-11-01T09:21:49.638Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Nov 1 2020</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/01/顺时针打印矩阵/">顺时针打印矩阵</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -712,8 +501,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
