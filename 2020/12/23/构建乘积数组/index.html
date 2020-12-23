@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>回文数（java） | 胥帆</title>
+  <title>构建乘积数组 | 胥帆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="牛客练习赛71，题一： 题目描述">
-<meta name="keywords" content="java">
+  <meta name="description" content="题目描述[给定一个数组A[0,1,…,n-1],请构建一个数组B[0,1,…,n-1],其中B中的元素B[i]=A[0]A[1]…A[i-1]A[i+1]…A[n-1]。不能使用除法。（注意：规定B[0] = A[1]  A[2]  …  A[n-1]，B[n-1] = A[0]  A[1]  …  A[n-2];） 对于A长度为1的情况，B无意义，故而无法构建，因此该情况不会存在。] 输入描述">
+<meta name="keywords" content="java,剑指offer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="回文数（java）">
-<meta property="og:url" content="http://yoursite.com/2020/10/10/回文数（java）/index.html">
+<meta property="og:title" content="构建乘积数组">
+<meta property="og:url" content="http://yoursite.com/2020/12/23/构建乘积数组/index.html">
 <meta property="og:site_name" content="胥帆">
-<meta property="og:description" content="牛客练习赛71，题一： 题目描述">
+<meta property="og:description" content="题目描述[给定一个数组A[0,1,…,n-1],请构建一个数组B[0,1,…,n-1],其中B中的元素B[i]=A[0]A[1]…A[i-1]A[i+1]…A[n-1]。不能使用除法。（注意：规定B[0] = A[1]  A[2]  …  A[n-1]，B[n-1] = A[0]  A[1]  …  A[n-2];） 对于A长度为1的情况，B无意义，故而无法构建，因此该情况不会存在。] 输入描述">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2020/10/10/回文数（java）/one.png">
-<meta property="og:updated_time" content="2020-10-10T04:35:25.043Z">
+<meta property="og:updated_time" content="2020-12-23T02:49:51.472Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="回文数（java）">
-<meta name="twitter:description" content="牛客练习赛71，题一： 题目描述">
-<meta name="twitter:image" content="http://yoursite.com/2020/10/10/回文数（java）/one.png">
+<meta name="twitter:title" content="构建乘积数组">
+<meta name="twitter:description" content="题目描述[给定一个数组A[0,1,…,n-1],请构建一个数组B[0,1,…,n-1],其中B中的元素B[i]=A[0]A[1]…A[i-1]A[i+1]…A[n-1]。不能使用除法。（注意：规定B[0] = A[1]  A[2]  …  A[n-1]，B[n-1] = A[0]  A[1]  …  A[n-2];） 对于A长度为1的情况，B无意义，故而无法构建，因此该情况不会存在。] 输入描述">
   
     <link rel="alternative" href="/atom.xml" title="胥帆" type="application/atom+xml">
   
@@ -231,14 +229,14 @@
           </div>
 		  
           <div id="js-content" class="content-ll">
-            <article id="post-回文数（java）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-构建乘积数组" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      回文数（java）
+      构建乘积数组
     </h1>
   
 
@@ -256,48 +254,38 @@
 		
 		
         
-        <a href="/2020/10/10/回文数（java）/" class="archive-article-date">
-  	<time datetime="2020-10-10T03:04:41.737Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Oct 10 2020</time>
+        <a href="/2020/12/23/构建乘积数组/" class="archive-article-date">
+  	<time datetime="2020-12-23T02:14:07.395Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Dec 23 2020</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>牛客练习赛71，题一：</p>
-<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p><img src="/2020/10/10/回文数（java）/one.png" alt="题目描述"></p>
-<a id="more"></a>
+        <h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a><a href="https://www.nowcoder.com/practice/94a4d381a68b47b7a8bed86f2975db46?tpId=13&amp;&amp;tqId=11204&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="noopener">题目描述</a></h4><p>[给定一个数组A[0,1,…,n-1],请构建一个数组B[0,1,…,n-1],其中B中的元素B[i]=A[0]<em>A[1]</em>…<em>A[i-1]</em>A[i+1]<em>…</em>A[n-1]。不能使用除法。（注意：规定B[0] = A[1] <em> A[2] </em> … <em> A[n-1]，B[n-1] = A[0] </em> A[1] <em> … </em> A[n-2];）</p>
+<p>对于A长度为1的情况，B无意义，故而无法构建，因此该情况不会存在。]</p>
 <h4 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h4><blockquote>
-<p>一行10个自然数，分别表示数码0~9的出现次数</p>
+<p>1 2 3 4 5</p>
 </blockquote>
 <h4 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h4><blockquote>
-<p>如果无解，只输出”-1”（不含引号）</p>
-<p>否则，输出一个数表示最小的解</p>
+<p>120 60 40 30 24</p>
 </blockquote>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><blockquote>
-<p>输入</p>
-<p>0 2 4 2 0 2 0 0 0 0</p>
-<p>输出</p>
-<p>1223553221</p>
-</blockquote>
-<blockquote>
-<p>1 1 4 5 1 4 0 0 0 0</p>
-<p>-1</p>
-</blockquote>
-<blockquote>
-<p>4 0 2 3 0 0 0 2 0 0</p>
-<p>20037373002</p>
-</blockquote>
-<blockquote>
-<p>2 0 0 0 0 0 0 0 0 1</p>
-<p>-1</p>
-</blockquote>
-<blockquote>
-<p>1 0 0 0 0 0 0 0 0 0</p>
-<p>0</p>
-</blockquote>
-<p>备注： 保证输入的所有数都不超过10，且至少一个数大于0；</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">11</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; ++i) &#123;</span><br><span class="line">            arr[i] = sc.nextInt();</span><br><span class="line">        &#125;</span><br><span class="line">        Main.solution(arr);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//        for(int n : arr) &#123;</span></span><br><span class="line"><span class="comment">//            System.out.print(n + (n == arr[arr.length-1] ? "\n": " "));</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//        System.out.println(arr.toString());</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> odd_count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> n : arr) &#123;</span><br><span class="line">            sum += n;</span><br><span class="line">            <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">1</span>) odd_count++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (odd_count&gt;<span class="number">1</span>) System.out.print(<span class="string">"-1"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> ((sum-arr[<span class="number">1</span>])==<span class="number">1</span> &amp;&amp; arr[<span class="number">1</span>] != <span class="number">0</span>) System.out.print(<span class="string">"-1"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">            String end = <span class="string">""</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; ++i) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[i] % <span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">                    end = String.valueOf(i - <span class="number">1</span>);</span><br><span class="line">                    arr[i]--;</span><br><span class="line">                &#125;</span><br><span class="line">                arr[i] &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= <span class="number">10</span>; ++i) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                    sb.append(String.valueOf(i - <span class="number">1</span>));</span><br><span class="line">                    arr[i]--;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; ++i) &#123;</span><br><span class="line">                <span class="keyword">while</span> (arr[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                    sb.append(String.valueOf(i - <span class="number">1</span>));</span><br><span class="line">                    arr[i]--;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.print(sb + end + sb.reverse());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="题解一"><a href="#题解一" class="headerlink" title="题解一"></a>题解一</h4><p>不能使用除法</p>
+<p>两重循环， 将ans数组初始化为1，分别乘其他元素即可，时间复杂度O(N^2^)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.*; <span class="comment">//键盘扫描类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] multiply(<span class="keyword">int</span>[] A) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] ans = <span class="keyword">new</span> <span class="keyword">int</span>[A.length];</span><br><span class="line">        Arrays.fill(ans,<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; A.length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i != j) &#123;</span><br><span class="line">                    ans[j] *= A[i];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="题解二"><a href="#题解二" class="headerlink" title="题解二"></a>题解二</h4><p>假设：</p>
+<p><code>left[i] = A[0]* ... *A[i-1]</code></p>
+<p><code>right[i] = A[i+1]* ... * A[n-1]</code></p>
+<p>所以：</p>
+<p><code>B[i] = left[i] * right[i]</code></p>
+<p>于是：</p>
+<p><code>left[i+1] = left[i] * A[i]</code></p>
+<p><code>right[i] = right[i+1] + A[i+1]</code></p>
+<p>所以，可以先把所有的left[i]，right[i]求出来。</p>
+<p><strong>时间复杂度：</strong>O(N)</p>
+<p><strong>空间复杂度：</strong>O(1)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.*; <span class="comment">//键盘扫描类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] multiply(<span class="keyword">int</span>[] A) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] ans = <span class="keyword">new</span> <span class="keyword">int</span>[A.length];</span><br><span class="line">        Arrays.fill(ans,<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">            ans[i] = ans[i-<span class="number">1</span>] * A[i-<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = A.length-<span class="number">2</span>; i &gt;= <span class="number">0</span> ; i--) &#123;</span><br><span class="line">            temp *= A[i+<span class="number">1</span>];</span><br><span class="line">            ans[i] *= temp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -319,6 +307,10 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
         		</li>
       		
 		</ul>
@@ -374,7 +366,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/10/回文数（java）/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/12/23/构建乘积数组/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -388,18 +380,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/11/01/顺时针打印矩阵/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          顺时针打印矩阵
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/09/29/链表操作-java/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">链表操作(java)</div>
+    <a href="/2020/12/22/把字符串转换成整数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">把字符串转换成整数</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -426,7 +409,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输入描述"><span class="toc-number">2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出描述"><span class="toc-number">3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#实例"><span class="toc-number">4.</span> <span class="toc-text">实例</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输入描述"><span class="toc-number">2.</span> <span class="toc-text">输入描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出描述"><span class="toc-number">3.</span> <span class="toc-text">输出描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#题解一"><span class="toc-number">4.</span> <span class="toc-text">题解一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#题解二"><span class="toc-number">5.</span> <span class="toc-text">题解二</span></a></li></ol>
                     </div>
                 </span>
             </div>
