@@ -28,7 +28,11 @@
 <meta property="og:image" content="http://yoursite.com/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/11.png">
 <meta property="og:image" content="http://yoursite.com/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/12.png">
 <meta property="og:image" content="http://yoursite.com/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/13.png">
-<meta property="og:updated_time" content="2021-01-31T08:32:58.420Z">
+<meta property="og:image" content="http://yoursite.com/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/14.png">
+<meta property="og:image" content="http://yoursite.com/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/15.png">
+<meta property="og:image" content="http://yoursite.com/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/16.png">
+<meta property="og:image" content="http://yoursite.com/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/17.png">
+<meta property="og:updated_time" content="2021-01-31T10:05:28.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="U盘安装linux、远程桌面、显卡驱动及conda安装">
 <meta name="twitter:description" content="服务器U盘安装linux系统一、安装环境 Window 10 系统 准备工具： 1、ubuntu系统安装包 2、一个格式化的16GU盘 二、安装步骤">
@@ -367,6 +371,35 @@
 <p>这里附上我个人的conda指令的部分笔记。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">conda <span class="keyword">update</span> conda <span class="comment"># 更新conda到最新的版本</span></span><br><span class="line">conda <span class="keyword">update</span> <span class="comment">--all # 更新所有包</span></span><br><span class="line"></span><br><span class="line">conda <span class="keyword">create</span> -n learn python=<span class="number">3</span>  <span class="comment"># 创建一个名为learn的环境并指定python版本为3</span></span><br><span class="line">conda <span class="keyword">create</span> -n python3 python=<span class="number">3.5</span> numpy pandas <span class="comment"># 创建一个名为python3的环境并同时安装numpy和pandas包</span></span><br><span class="line"><span class="keyword">activate</span> learn <span class="comment"># 创建好之后，切换到learn环境 activate &lt;env_name&gt;</span></span><br><span class="line">conda env <span class="keyword">list</span> <span class="comment"># 查看conda管理的所有环境</span></span><br><span class="line"></span><br><span class="line">deactivate env_name  <span class="comment"># 退出创建的虚拟环境</span></span><br><span class="line"><span class="keyword">activate</span> root  <span class="comment"># 退出创建的虚拟环境</span></span><br><span class="line"></span><br><span class="line">conda remove -n learn <span class="comment">--all  # 删除learn环境及下属所有包</span></span><br><span class="line">conda <span class="keyword">list</span> <span class="comment"># 列出当前环境下的所有包</span></span><br><span class="line">conda <span class="keyword">install</span> requests <span class="comment"># 安装requests包</span></span><br><span class="line">conda <span class="keyword">update</span> requests <span class="comment"># 更新包</span></span><br><span class="line"></span><br><span class="line">conda config <span class="comment">--show channels # 查看channels</span></span><br><span class="line">conda env <span class="keyword">export</span> &gt; environment.yaml</span><br><span class="line"><span class="comment"># 导出当前环境的包信息，环境会被保存在environment.yaml文件中，该文件路径一般在C盘用户文件夹里面</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 根据别人提供的.yaml配置文件创建新的虚拟环境，</span></span><br><span class="line">conda env <span class="keyword">create</span> -f environment.yaml</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">linux下anaconda 的使用</span><br><span class="line"><span class="keyword">source</span> <span class="keyword">activate</span> env_name  <span class="comment"># 激活名为env_name 的环境</span></span><br><span class="line"><span class="keyword">source</span> deactivate env_name <span class="comment"># 退出env_name的环境</span></span><br><span class="line">conda remove -<span class="keyword">name</span> env_name <span class="comment"># 删除环境</span></span><br><span class="line"></span><br><span class="line">解压zip文件：</span><br><span class="line">jar xvf filename.zip</span><br></pre></td></tr></table></figure>
 <p>参考博客：<a href="!https://www.cnblogs.com/msq2000/p/13056177.html">https://www.cnblogs.com/msq2000/p/13056177.html</a></p>
+<h3 id="ubuntu18-04-安装jupyter-notebook并配置"><a href="#ubuntu18-04-安装jupyter-notebook并配置" class="headerlink" title="ubuntu18.04 安装jupyter-notebook并配置"></a>ubuntu18.04 安装jupyter-notebook并配置</h3><p>1、<code>sudo apt-get update</code></p>
+<p>2、<code>sudo apt-get install jupyter-notebook</code></p>
+<p>3、配置jupter-notebook</p>
+<ol>
+<li><p>运行<code>sudo jupyter-notebook --generate-config --allow-root</code>，会自动生成~/.jupyter/jupyter-notebook-config.py。可以得到自动生成config的路径。</p>
+<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/14.png" alt></p>
+</li>
+<li><p>更改jupyter-notebook配置文件。</p>
+</li>
+<li><p>运行<code>sudo vim &lt;刚才生成的路径&gt;</code>，如</p>
+<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/15.png" alt></p>
+<p>进入到编辑jupyter-notebook配置文件的界面</p>
+</li>
+<li><p>可以根据自己的需求自行的配置该jupyter-notebook配置文件，将需要配置的前面的<code>#</code>号删掉就可以了，</p>
+</li>
+<li><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.notebook_dir = <span class="string">'/home/&lt;当前用户&gt;/work'</span></span><br><span class="line">设置默认路径：（建议使用绝对路径，~在配置中代表默认工作区，如果不是第一次设置容易出错）</span><br><span class="line">c.NotebookApp.token=<span class="string">'登陆密码'</span>  如果设置为空<span class="string">''</span>,则运行则不需要密码</span><br><span class="line">c.NotebookApp.ip = <span class="string">'*'</span>   这个‘*<span class="string">'就表示任何IP可以访问该jupyter服务’</span></span><br><span class="line"><span class="string">c.NotebookApp.port=8888 .默认为8888</span></span><br></pre></td></tr></table></figure>
+<p>可以通过删掉<code>#</code>来配置，也可以自己写配置文件，如下：</p>
+<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/16.png" alt></p>
+</li>
+<li><p>配置默认的根目录，</p>
+<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/17.png" alt></p>
+</li>
+<li><p>配置文件改好之后，按Esc然后输入<code>:wq</code>表示保存并退出，具体的vim语法可以百度。</p>
+</li>
+<li><p>保存了改好之后的配置文件，输入<code>sudo jupter-notebook --allow-root</code>开启jupyter-notebook服务。</p>
+</li>
+<li><p>用户就可以在本地的浏览器上面输入服务器ip地址和设置的port端口号来正常访问jupyter-notebook操作python。如在浏览器中输入<code>http://&lt;服务器ip地址&gt;:端口号</code>，然后输入设置的密码就可以访问了。</p>
+</li>
+</ol>
 
       
 
@@ -486,7 +519,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#服务器U盘安装linux系统"><span class="toc-number">1.</span> <span class="toc-text">服务器U盘安装linux系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置Win10远程连接Ubuntu18-04桌面"><span class="toc-number">2.</span> <span class="toc-text">配置Win10远程连接Ubuntu18.04桌面</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、原生桌面"><span class="toc-number">2.1.</span> <span class="toc-text">一、原生桌面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、xfce桌面"><span class="toc-number">2.2.</span> <span class="toc-text">二、xfce桌面</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-18-04安装显卡驱动"><span class="toc-number">3.</span> <span class="toc-text">Ubuntu 18.04安装显卡驱动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu18-04-安装Anaconda3"><span class="toc-number">4.</span> <span class="toc-text">Ubuntu18.04 安装Anaconda3</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#服务器U盘安装linux系统"><span class="toc-number">1.</span> <span class="toc-text">服务器U盘安装linux系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置Win10远程连接Ubuntu18-04桌面"><span class="toc-number">2.</span> <span class="toc-text">配置Win10远程连接Ubuntu18.04桌面</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、原生桌面"><span class="toc-number">2.1.</span> <span class="toc-text">一、原生桌面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、xfce桌面"><span class="toc-number">2.2.</span> <span class="toc-text">二、xfce桌面</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-18-04安装显卡驱动"><span class="toc-number">3.</span> <span class="toc-text">Ubuntu 18.04安装显卡驱动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu18-04-安装Anaconda3"><span class="toc-number">4.</span> <span class="toc-text">Ubuntu18.04 安装Anaconda3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ubuntu18-04-安装jupyter-notebook并配置"><span class="toc-number">5.</span> <span class="toc-text">ubuntu18.04 安装jupyter-notebook并配置</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -566,7 +599,7 @@
 		
 		
 		<i class="fas fa-chart-area"></i>
-		<span class="post-count">字数统计：67.3k</span>
+		<span class="post-count">字数统计：67.7k</span>
 		
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
