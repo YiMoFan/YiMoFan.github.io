@@ -32,7 +32,7 @@
 <meta property="og:image" content="http://yoursite.com/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/15.png">
 <meta property="og:image" content="http://yoursite.com/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/16.png">
 <meta property="og:image" content="http://yoursite.com/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/17.png">
-<meta property="og:updated_time" content="2021-01-31T10:05:28.455Z">
+<meta property="og:updated_time" content="2021-03-02T08:22:05.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="U盘安装linux、远程桌面、显卡驱动及conda安装">
 <meta name="twitter:description" content="服务器U盘安装linux系统一、安装环境 Window 10 系统 准备工具： 1、ubuntu系统安装包 2、一个格式化的16GU盘 二、安装步骤">
@@ -287,16 +287,16 @@
 <p><strong>二、安装步骤</strong></p>
 <a id="more"></a>
 <p>1、重启系统，在开机的时候按F12，不同的电脑可能不一样，可自行百度不同型号的电脑如何进入boot界面，按F12之后会进入一下界面。</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/1.JPG" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/1.JPG" alt></div></p>
 <p>选择自己U盘的名称，然后回车确认。会进入ubuntu的安装界面，选择<code>install ubuntu</code>，这个界面可以会没有，如果没有就直接进入下面这个界面。</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/2.JPG" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/2.JPG" alt></div></p>
 <p>2、选择右边，拖到最下面，会有   简体中文   ，选择，如图</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/3.JPG" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/3.JPG" alt></div></p>
 <p>然后确认，会提示准备暗转Ubuntu，这里选择   <code>最小安装</code>（最快安装），也可以选择其他的，然后继续，得到如下界面。</p>
 <p>3、这一步<strong>很重要</strong>，一定选择<code>其他选项</code>，</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/4.JPG" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/4.JPG" alt></div></p>
 <p>然后就会进入如下界面。</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/5.JPG" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/5.JPG" alt></div></p>
 <p>这里选择<code>新建分区表</code>，可能在下面，或者在右下方，然后选择空闲，会默认将之前的分区表格式化掉，然后点击左下方的<code>+</code>，表示新建分区。</p>
 <ol>
 <li>首先创建根目录，大小再25G左右，用于EXT4文件系统，挂载点下拉菜单，选择<code>/</code>，其他默认，然后确定，然后继续选择空间分区，点击添加。</li>
@@ -307,7 +307,7 @@
 </ol>
 <p>4、然后接下来就是选择开始安装，会出现选择地区，随便选一个，然后设置语言，键盘布局默认。</p>
 <p>5、然后设置系统用户，用户自己设置输入就可以了</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/7.JPG" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/7.JPG" alt></div></p>
 <p>6、点击继续，系统就开始安装了，安装完成之后会提示重启电脑，重启之后就系统就安装完成了！</p>
 <p>进入系统后，需要安装net-tools才能查看本地ip地址</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt <span class="keyword">install</span> net-tools</span><br></pre></td></tr></table></figure>
@@ -339,7 +339,7 @@
 </ol>
 <p>2、win10 搜索栏搜索mstsc，打开远程桌面，输入ip地址，端口3389，再输入用户名和密码。</p>
 <h3 id="Ubuntu-18-04安装显卡驱动"><a href="#Ubuntu-18-04安装显卡驱动" class="headerlink" title="Ubuntu 18.04安装显卡驱动"></a>Ubuntu 18.04安装显卡驱动</h3><p>1、先查看显卡硬件型号，在终端输入：<code>ubuntu-drivers devices</code>，可以看到如下界面：</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/8.png" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/8.png" alt></div></p>
 <p>从上图可以看出，我的显卡是：<code>GeForce GTX 1060 6GB</code>，推荐安装的版本是：<code>driver   : nvidia-driver-460 - distro non-free recommended</code>。</p>
 <p>2、如果同意安装推荐版本，只需要在终端输入：<code>sudo ubuntu-drivers autoinstall</code>，就可以自动安装了。</p>
 <p>也可以使用apt命令来安装自己想要安装的版本，比如想安装390版本号的版本，终端输入：<code>sudo apt install nvidia-driver-390</code>。</p>
@@ -348,19 +348,19 @@
 <p>重启之后输入：</p>
 <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>nvidia-smi</span><br></pre></td></tr></table></figure>
 <p>如果可以出现如下界面表示显卡驱动安装完成。</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/9.png" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/9.png" alt></div></p>
 <h3 id="Ubuntu18-04-安装Anaconda3"><a href="#Ubuntu18-04-安装Anaconda3" class="headerlink" title="Ubuntu18.04 安装Anaconda3"></a>Ubuntu18.04 安装Anaconda3</h3><p>1、下载Anaconda3-5.3.0-Linux-x86_64.sh（Ubuntu18.04的对应的Anaconda版本）</p>
 <p>推荐去<a href="!https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">清华大学开源软件镜像站</a>下载对应的版本，然后cd到下载的文件夹路径。</p>
 <p>2、运行.sh文件：</p>
 <figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bash Anaconda3<span class="number">-5.3</span><span class="number">.0</span>-Linux-x86_64.sh</span><br></pre></td></tr></table></figure>
 <p>输入<code>yes</code>出现如下界面：</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/10.png" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/10.png" alt></div></p>
 <p>然后继续<code>yes</code>完成注册信息界面。</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/11.png" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/11.png" alt></div></p>
 <p>这里可以存在安装的文件路径，我这里就直接默认了，回车就可以了，然后就开始安装。</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/12.png" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/12.png" alt></div></p>
 <p>到这里提示是否将路径加入到环境变量里面，默认是no，这里我们选择输入yes。为了后续不用多余的添加环境变量。</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/13.png" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/13.png" alt></div></p>
 <p>到这里提示是否哦暗转VSCode，这里我输入no。</p>
 <p>控制台输入<code>python</code>，可以看出还是使用的Ubuntu自带的python。输入：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">source</span> ~/.bashrc</span></span><br></pre></td></tr></table></figure>
@@ -376,22 +376,22 @@
 <p>3、配置jupter-notebook</p>
 <ol>
 <li><p>运行<code>sudo jupyter-notebook --generate-config --allow-root</code>，会自动生成~/.jupyter/jupyter-notebook-config.py。可以得到自动生成config的路径。</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/14.png" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/14.png" alt></div></p>
 </li>
 <li><p>更改jupyter-notebook配置文件。</p>
 </li>
 <li><p>运行<code>sudo vim &lt;刚才生成的路径&gt;</code>，如</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/15.png" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/15.png" alt></div></p>
 <p>进入到编辑jupyter-notebook配置文件的界面</p>
 </li>
 <li><p>可以根据自己的需求自行的配置该jupyter-notebook配置文件，将需要配置的前面的<code>#</code>号删掉就可以了，</p>
 </li>
 <li><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.notebook_dir = <span class="string">'/home/&lt;当前用户&gt;/work'</span></span><br><span class="line">设置默认路径：（建议使用绝对路径，~在配置中代表默认工作区，如果不是第一次设置容易出错）</span><br><span class="line">c.NotebookApp.token=<span class="string">'登陆密码'</span>  如果设置为空<span class="string">''</span>,则运行则不需要密码</span><br><span class="line">c.NotebookApp.ip = <span class="string">'*'</span>   这个‘*<span class="string">'就表示任何IP可以访问该jupyter服务’</span></span><br><span class="line"><span class="string">c.NotebookApp.port=8888 .默认为8888</span></span><br></pre></td></tr></table></figure>
 <p>可以通过删掉<code>#</code>来配置，也可以自己写配置文件，如下：</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/16.png" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/16.png" alt></div></p>
 </li>
 <li><p>配置默认的根目录，</p>
-<p><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/17.png" alt></p>
+<p><div align="center"><img src="/2021/01/30/U盘安装linux、远程桌面、显卡驱动及conda安装/17.png" alt></div></p>
 </li>
 <li><p>配置文件改好之后，按Esc然后输入<code>:wq</code>表示保存并退出，具体的vim语法可以百度。</p>
 </li>
@@ -608,7 +608,7 @@
 		
 		
 		<i class="fas fa-chart-area"></i>
-		<span class="post-count">字数统计：68.5k</span>
+		<span class="post-count">字数统计：71.5k</span>
 		
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -730,19 +730,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -751,6 +739,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数论</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -766,10 +762,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">递推</a>
               </li>
              
@@ -778,11 +770,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">考研</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">链表</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
               </li>
              
               <li class="article-tag-list-item">

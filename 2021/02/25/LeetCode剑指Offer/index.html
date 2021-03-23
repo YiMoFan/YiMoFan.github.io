@@ -9,17 +9,20 @@
   <title>LeetCode剑指Offer | 胥帆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="剑指Offer 03.  数组中重复的数字题目描述 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。 实例  输入： [2,3,1,0,2,5,3] 输出：2 或 3  限制： 2 &amp;lt;= n &amp;lt;= n">
-<meta name="keywords" content="LeetCode,java">
+<meta name="keywords" content="java,LeetCode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode剑指Offer">
 <meta property="og:url" content="http://yoursite.com/2021/02/25/LeetCode剑指Offer/index.html">
 <meta property="og:site_name" content="胥帆">
 <meta property="og:description" content="剑指Offer 03.  数组中重复的数字题目描述 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。 实例  输入： [2,3,1,0,2,5,3] 输出：2 或 3  限制： 2 &amp;lt;= n &amp;lt;= n">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-02-27T07:23:33.401Z">
+<meta property="og:image" content="http://yoursite.com/2021/02/25/LeetCode剑指Offer/1599404042-JMvjtL-Picture1.png">
+<meta property="og:image" content="http://yoursite.com/2021/02/25/LeetCode剑指Offer/1604944042-glmqJO-Picture0.png">
+<meta property="og:updated_time" content="2021-03-03T12:38:59.904Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode剑指Offer">
 <meta name="twitter:description" content="剑指Offer 03.  数组中重复的数字题目描述 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。 实例  输入： [2,3,1,0,2,5,3] 输出：2 或 3  限制： 2 &amp;lt;= n &amp;lt;= n">
+<meta name="twitter:image" content="http://yoursite.com/2021/02/25/LeetCode剑指Offer/1599404042-JMvjtL-Picture1.png">
   
     <link rel="alternative" href="/atom.xml" title="胥帆" type="application/atom+xml">
   
@@ -310,6 +313,130 @@
 <p>空间复杂度：O(1)</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findRepeatNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(i &lt; nums.length) &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i] == i) &#123;</span><br><span class="line">                i++;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(nums[nums[i]] == nums[i]) <span class="keyword">return</span> nums[i];</span><br><span class="line">            <span class="keyword">int</span> tmp = nums[i];</span><br><span class="line">            nums[i] = nums[tmp];</span><br><span class="line">            nums[tmp] = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findRepeatNumber</span><span class="params">(self, nums: [int])</span> -&gt; int:</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; len(nums):</span><br><span class="line">            <span class="keyword">if</span> nums[i] == i:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">if</span> nums[nums[i]] == nums[i]: <span class="keyword">return</span> nums[i]</span><br><span class="line">            nums[nums[i]], nums[i] = nums[i], nums[nums[i]]</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<h4 id="剑指Offer-06-从尾到头打印链表"><a href="#剑指Offer-06-从尾到头打印链表" class="headerlink" title="剑指Offer 06. 从尾到头打印链表"></a><a href="https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/" target="_blank" rel="noopener">剑指Offer 06. 从尾到头打印链表</a></h4><p><strong>题目描述</strong></p>
+<p>输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）</p>
+<p><strong>实例1</strong></p>
+<blockquote>
+<p>输入：head = [1,3,2]</p>
+<p>输出：[2,3,1]</p>
+</blockquote>
+<p>限制：</p>
+<p>0&lt;=链表长度&lt;=10000</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] reversePrint(ListNode head) &#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; ans = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        ListNode temp = head;</span><br><span class="line">        <span class="keyword">while</span> (temp != <span class="keyword">null</span>) &#123;</span><br><span class="line">            ans.add(temp.val);</span><br><span class="line">            temp = temp.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[ans.size()];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = ans.size()-<span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            res[ans.size()-i-<span class="number">1</span>] = ans.get(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><a href="https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/solution/mian-shi-ti-06-cong-wei-dao-tou-da-yin-lian-biao-d/" target="_blank" rel="noopener">题解</a></strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    ArrayList&lt;Integer&gt; tmp = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] reversePrint(ListNode head) &#123;</span><br><span class="line">        recur(head);</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[tmp.size()];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; res.length; i++)</span><br><span class="line">            res[i] = tmp.get(i);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">recur</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        recur(head.next);</span><br><span class="line">        tmp.add(head.val);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reversePrint</span><span class="params">(self, head: ListNode)</span> -&gt; List[int]:</span></span><br><span class="line">        <span class="keyword">return</span> self.reversePrint(head.next) + [head.val] <span class="keyword">if</span> head <span class="keyword">else</span> []</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] reversePrint(ListNode head) &#123;</span><br><span class="line">        LinkedList&lt;Integer&gt; stack = <span class="keyword">new</span> LinkedList&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">while</span>(head != <span class="keyword">null</span>) &#123;</span><br><span class="line">            stack.addLast(head.val);</span><br><span class="line">            head = head.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[stack.size()];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; res.length; i++)</span><br><span class="line">            res[i] = stack.removeLast();</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="剑指Offer-11-旋转数组的最小数字"><a href="#剑指Offer-11-旋转数组的最小数字" class="headerlink" title="剑指Offer 11. 旋转数组的最小数字"></a><a href="https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/" target="_blank" rel="noopener">剑指Offer 11. 旋转数组的最小数字</a></h4><p><strong>题目描述</strong></p>
+<p>把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。例如，数组 [3,4,5,1,2] 为 [1,2,3,4,5] 的一个旋转，该数组的最小值为1。  </p>
+<p><strong>示例</strong></p>
+<blockquote>
+<p>输入：[3,4,5,1,2]</p>
+<p>输出：1</p>
+<p>输入：[2,2,2,0,1]</p>
+<p>输出：0</p>
+</blockquote>
+<p><strong><a href="https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/solution/mian-shi-ti-11-xuan-zhuan-shu-zu-de-zui-xiao-shu-3/" target="_blank" rel="noopener">题解</a></strong></p>
+<p>如下图所示，寻找旋转数组的最小元素即为寻找<strong>右排序数组</strong>的首个元素nums[x]，称x为<strong>旋转点</strong></p>
+<p><div align="center"><img src="/2021/02/25/LeetCode剑指Offer/1599404042-JMvjtL-Picture1.png" alt></div></p>
+<p>排序数组的查找问题首先考虑使用<strong>二分法</strong>解决，其可将<strong>遍历法</strong>的<strong>线性级别</strong>时间复杂度降低至<strong>对数级别</strong>。</p>
+<p>算法流程：</p>
+<ol>
+<li>初始化：声明i,j双指针分别指向nums数组的左右两端；</li>
+<li>循环二分：设m=(i+j)/2为每次二分的中点(“/“代表向下取整除法，因此恒有i&lt;=m&lt;j)，可以分为以下三种情况：<ol>
+<li>当nums[m] &gt; nums[j]时：m一定在 左排序数组 中，即旋转点x一定在[m+1,j]闭区间内，因此执行i=m+1;</li>
+<li>当nums[m] &lt; nums[j]时：m一定在 右排序数组 中，即旋转点x一定在[i,m]闭区间内，因此执行j=m;</li>
+<li>当nums[m] == nums[j]时：无法判断m在哪个排序数组中，即无法判断旋转点x在[i,m]还是在[m+1,j]区间中。<strong>解决方案：</strong>执行j=j-1缩小判断范围，分析如下；</li>
+</ol>
+</li>
+<li>返回值：当i=j时跳出二分循环，并返回<strong>旋转点的值</strong>nums[i]即可。</li>
+</ol>
+<p>正确性证明：</p>
+<p>当nums[m]=nums[j]时，无法判定m在左(右)排序数组，自然也无法通过二分法安全地缩小区间，因为其会导致旋转点x不在区间[i,j]内。</p>
+<blockquote>
+<p>设以下两个旋转点值为0的示例数组，则当i=0，j=4时m=2，两示例结果不同。</p>
+<p>示例一[1,0,1,1,1]:旋转点x=1，因此m=2在<strong>右排序数组</strong>中</p>
+<p>示例二[1,1,1,0,1]:旋转点x=3，因此m=2在<strong>左排序数组</strong>中</p>
+</blockquote>
+<p>而证明j=j-1正确(缩小区间安全性)，需分为两种情况：</p>
+<ol>
+<li>当x&lt;j时：易得执行j=j-1后，旋转点x仍在区间[i,j]内。</li>
+<li>当x=j时：执行j=j-1后越过(丢失)了旋转点x，但最终返回的元素值nums[i]仍等于旋转点值nums[x]。<ol>
+<li>由于x=j，因此nums[x]=nums[m]&lt;=nums[i]；</li>
+<li>又由于i&lt;=m&lt;j恒成立，因此有m&lt;x，即此时m一定在左排序数组中，因此nums[m]&gt;=nums[i];</li>
+</ol>
+</li>
+</ol>
+<p>综上：1,2，可以推出nums[i]=nums[m]，且区间[i,m]内所有元素值相等，既有：</p>
+<p>nums[i]=nums[i+1]=……=nums[m]=nums[x]</p>
+<p>此时，执行j=j-1后虽然丢失了旋转点x，但之后区间[i,j]只包含左排序数组，二分下去返回的一定是本轮的nums[i]，而其与nums[x]相等。</p>
+<blockquote>
+<p>综上所述：此方法可以保证返回值nums[i]等于旋转点值nums[x]，但在少数特例下i != x；而本题只要求返回“旋转点的值”，因此本方法可以。</p>
+</blockquote>
+<p>本题不能用nums[m]和nums[i]作比较是因为可能存在  <strong>可能只有右排序数组</strong>  的情况。</p>
+<p>时间复杂度：O(log2 N)：在特例情况下（例如[1,1,1,1]），会退化到O(N)</p>
+<p>空间复杂度：O(1)；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minArray</span><span class="params">(<span class="keyword">int</span>[] numbers)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> low = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> high = numbers.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (low &lt; high) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = low + (high - low) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (numbers[mid] &lt; numbers[high]) high = mid;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (numbers[mid] &gt; numbers[high]) low = mid+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> high--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> numbers[high];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minArray</span><span class="params">(self, numbers: [int])</span> -&gt; int:</span></span><br><span class="line">        i, j = <span class="number">0</span>, len(numbers) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; j:</span><br><span class="line">            m = (i + j) // <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> numbers[m] &gt; numbers[j]: i = m + <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> numbers[m] &lt; numbers[j]: j = m</span><br><span class="line">            <span class="keyword">else</span>: j -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> numbers[i]</span><br></pre></td></tr></table></figure>
+<p>实际上，当出现nums[m] = nums[j]时，一定有区间[i,m]内所有元素相等 或 区间[m,j]内所有元素相等（或两者皆满足）。对于寻找此类数组的最小值问题，可直接放弃二分查找，而使用线性查找替代。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minArray</span><span class="params">(<span class="keyword">int</span>[] numbers)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>, j = numbers.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">            <span class="keyword">int</span> m = (i + j) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (numbers[m] &gt; numbers[j]) i = m + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (numbers[m] &lt; numbers[j]) j = m;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">int</span> x = i;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k = i + <span class="number">1</span>; k &lt; j; k++) &#123;</span><br><span class="line">                    <span class="keyword">if</span>(numbers[k] &lt; numbers[x]) x = k;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> numbers[x];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> numbers[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minArray</span><span class="params">(self, numbers: [int])</span> -&gt; int:</span></span><br><span class="line">        i, j = <span class="number">0</span>, len(numbers) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; j:</span><br><span class="line">            m = (i + j) // <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> numbers[m] &gt; numbers[j]: i = m + <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> numbers[m] &lt; numbers[j]: j = m</span><br><span class="line">            <span class="keyword">else</span>: <span class="keyword">return</span> min(numbers[i:j])</span><br><span class="line">        <span class="keyword">return</span> numbers[i]</span><br></pre></td></tr></table></figure>
+<p><strong>参考</strong></p>
+<p>作者：jyd<br>链接：<a href="https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/solution/mian-shi-ti-11-xuan-zhuan-shu-zu-de-zui-xiao-shu-3/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/solution/mian-shi-ti-11-xuan-zhuan-shu-zu-de-zui-xiao-shu-3/</a><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h4 id="剑指Offer-12-矩阵中的路径"><a href="#剑指Offer-12-矩阵中的路径" class="headerlink" title="剑指Offer 12. 矩阵中的路径"></a><a href="https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/" target="_blank" rel="noopener">剑指Offer 12. 矩阵中的路径</a></h4><p><strong>题目描述</strong></p>
+<p>请设计一个函数，用来判断在一个矩阵中是否存在一条包含某字符串所有字符的路径。路径可以从矩阵中的任意一格开始，每一步可以在矩阵中向左、右、上、下移动一格。如果一条路径经过了矩阵的某一格，那么该路径不能再次进入该格子。例如，在下面的3×4的矩阵中包含一条字符串“bfce”的路径（路径中的字母用加粗标出）。</p>
+<p>[[“a”,”b”,”c”,”e”],<br>[“s”,”f”,”c”,”s”],<br>[“a”,”d”,”e”,”e”]]</p>
+<p>但矩阵中不包含字符串“abfb”的路径，因为字符串的第一个字符b占据了矩阵中的第一行第二个格子之后，路径不能再次进入这个格子。</p>
+<p><strong>示例</strong></p>
+<blockquote>
+<p>输入：board = [[“A”,”B”,”C”,”E”],[“S”,”F”,”C”,”S”],[“A”,”D”,”E”,”F”]], word = “ABCCED”</p>
+<p>输出：true</p>
+<p>输入：board = [[“a”,”b”],[“c”,”d”]], word = “abcd”</p>
+<p>输出：false</p>
+</blockquote>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= board.length &lt;= 200</li>
+<li>1 &lt;= board[i].length &lt;= 200</li>
+</ul>
+<p><strong><a href="https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/solution/mian-shi-ti-12-ju-zhen-zhong-de-lu-jing-shen-du-yo/" target="_blank" rel="noopener">题解</a></strong></p>
+<p>典型的矩阵搜索问题，使用 <strong>深度优先搜索(DFS) + 剪枝</strong> 方法 </p>
+<ul>
+<li><strong>深度优先搜索</strong>： 暴力遍历矩阵中所有字符串的可能性，DFS通过递归，定义四个方向，先往一个方向搜到边界或者是遇到障碍，再回退到上一个节点，换另外一个方向搜索下去，以此类推。</li>
+<li><strong>剪枝：</strong> 在搜索中，遇到 <code>这条路不可能和目标字符串匹配成功</code>的情况（例如：此矩阵元素和目标字符不同，此元素已被访问），则应立即返回，称之为：<code>可行性剪枝</code>。</li>
+</ul>
+<p><div align="center"><img src="/2021/02/25/LeetCode剑指Offer/1604944042-glmqJO-Picture0.png" alt></div></p>
+<p>DFS解析：</p>
+<ul>
+<li><strong>递归参数：</strong>当前元素在矩阵board中的行列索引i 和 j，当前目标字符在 word 中的索引 k。</li>
+<li><strong>终止条件：</strong><ol>
+<li>返回false：(1)行或列索引越界(2)当前矩阵元素与目标字符不同(3)当前矩阵元素已访问过</li>
+<li>返回true：字符串word已经全部匹配。</li>
+</ol>
+</li>
+<li><strong>递推工作：</strong><ol>
+<li>标记当前矩阵元素：修改<code>board[i][j]</code>的值，代表此元素已经访问过，防止之后搜索时重复访问。</li>
+<li>搜索下一单元格：朝当前元素的 上、下、左、右四个方向开启下层递归，使用 或 连接（代表只需找到一条可行路径就直接返回，不用再做后续DFS），并返回结果。</li>
+<li>还原当前矩阵元素：将<code>board[i][j]</code>元素还原为初始值，即word[k]。</li>
+</ol>
+</li>
+<li><strong>返回值：</strong>返回布尔量，代表是否搜索到目标字符串。</li>
+</ul>
+<p>复杂度分析：</p>
+<blockquote>
+<p>M,N分别为矩阵行列大小，K为字符串word长度。</p>
+</blockquote>
+<ul>
+<li>时间复杂度：O(3^k^MN)：最差情况下，需要遍历矩阵中长度为K字符串的所有方案，时间复杂度为O(3^K^)；矩阵中共有MN个起点，时间复杂度为O(MN)。<ul>
+<li>方案数计算：设字符串长度为K，搜索中每个字符有上、下、左、右四个方向可以选择，舍弃回头(上个字符)的方向，剩下3中选择，因此方案数的复杂度为 O(3^K^)。</li>
+</ul>
+</li>
+<li>空间复杂度：O(K)：搜索过程中的递归深度不超过K，因此系统因函数调用累计使用的栈空间占有O(K)（因为函数返回后，系统调用栈空间会释放）。最坏情况下K=MN，递归深度为MN，此时系统栈使用O(MN)的额外空间。</li>
+</ul>
+<p>java代码有两种方式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.Array;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] dx = &#123;<span class="number">1</span>,<span class="number">0</span>,-<span class="number">1</span>,<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] dy = &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,-<span class="number">1</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">exist</span><span class="params">(<span class="keyword">char</span>[][] board, String word)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; board.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; board[<span class="number">0</span>].length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (board[i][j] == word.charAt(<span class="number">0</span>)) &#123;</span><br><span class="line">                    board[i][j] = <span class="string">'/'</span>;</span><br><span class="line">                    <span class="keyword">if</span> (dfs(i,j,<span class="number">1</span>,board,word)) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">                    board[i][j] = word.charAt(<span class="number">0</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> index, <span class="keyword">char</span>[][] board, String word)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (index == word.length()) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> tempx = x + dx[i];</span><br><span class="line">            <span class="keyword">int</span> tempy = y + dy[i];</span><br><span class="line">            <span class="keyword">if</span> (tempx &gt;=<span class="number">0</span> &amp;&amp; tempx &lt; board.length &amp;&amp; tempy &gt;= <span class="number">0</span> &amp;&amp; tempy &lt; board[<span class="number">0</span>].length &amp;&amp; board[tempx][tempy] == word.charAt(index)) &#123;</span><br><span class="line">                board[tempx][tempy] = <span class="string">'/'</span>;</span><br><span class="line">                <span class="keyword">if</span> (dfs(tempx,tempy,index+<span class="number">1</span>,board,word)) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">                board[tempx][tempy] = word.charAt(index);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String arg[])</span> </span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> n = input.nextInt();</span><br><span class="line">        <span class="keyword">int</span> m = input.nextInt();</span><br><span class="line">        <span class="keyword">char</span>[][] arr = <span class="keyword">new</span> <span class="keyword">char</span>[n][m];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            String str = input.next();</span><br><span class="line"><span class="comment">//            System.out.println(str);</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; j++) &#123;</span><br><span class="line">                arr[i][j] = str.charAt(j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        String word = input.next();</span><br><span class="line"></span><br><span class="line">        System.out.println(Arrays.deepToString(arr));</span><br><span class="line"></span><br><span class="line">        System.out.print(<span class="keyword">new</span> Solution().exist(arr, word));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">exist</span><span class="params">(<span class="keyword">char</span>[][] board, String word)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">char</span>[] words = word.toCharArray();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; board.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; board[<span class="number">0</span>].length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span>(dfs(board, words, i, j, <span class="number">0</span>)) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">dfs</span><span class="params">(<span class="keyword">char</span>[][] board, <span class="keyword">char</span>[] word, <span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(i &gt;= board.length || i &lt; <span class="number">0</span> || j &gt;= board[<span class="number">0</span>].length || j &lt; <span class="number">0</span> || board[i][j] != word[k]) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(k == word.length - <span class="number">1</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        board[i][j] = <span class="string">'\0'</span>;</span><br><span class="line">        <span class="keyword">boolean</span> res = dfs(board, word, i + <span class="number">1</span>, j, k + <span class="number">1</span>) || dfs(board, word, i - <span class="number">1</span>, j, k + <span class="number">1</span>) || </span><br><span class="line">                      dfs(board, word, i, j + <span class="number">1</span>, k + <span class="number">1</span>) || dfs(board, word, i , j - <span class="number">1</span>, k + <span class="number">1</span>);</span><br><span class="line">        board[i][j] = word[k];</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">exist</span><span class="params">(self, board: List[List[str]], word: str)</span> -&gt; bool:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">dfs</span><span class="params">(i, j, k)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> <span class="number">0</span> &lt;= i &lt; len(board) <span class="keyword">or</span> <span class="keyword">not</span> <span class="number">0</span> &lt;= j &lt; len(board[<span class="number">0</span>]) <span class="keyword">or</span> board[i][j] != word[k]: <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            <span class="keyword">if</span> k == len(word) - <span class="number">1</span>: <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            board[i][j] = <span class="string">''</span></span><br><span class="line">            res = dfs(i + <span class="number">1</span>, j, k + <span class="number">1</span>) <span class="keyword">or</span> dfs(i - <span class="number">1</span>, j, k + <span class="number">1</span>) <span class="keyword">or</span> dfs(i, j + <span class="number">1</span>, k + <span class="number">1</span>) <span class="keyword">or</span> dfs(i, j - <span class="number">1</span>, k + <span class="number">1</span>)</span><br><span class="line">            board[i][j] = word[k]</span><br><span class="line">            <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(board)):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(len(board[<span class="number">0</span>])):</span><br><span class="line">                <span class="keyword">if</span> dfs(i, j, <span class="number">0</span>): <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
 
       
 
@@ -330,11 +457,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
         		</li>
       		
 		</ul>
@@ -433,7 +560,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#剑指Offer-03-数组中重复的数字"><span class="toc-number">1.</span> <span class="toc-text">剑指Offer 03.  数组中重复的数字</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#剑指Offer-03-数组中重复的数字"><span class="toc-number">1.</span> <span class="toc-text">剑指Offer 03.  数组中重复的数字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#剑指Offer-06-从尾到头打印链表"><span class="toc-number">2.</span> <span class="toc-text">剑指Offer 06. 从尾到头打印链表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#剑指Offer-11-旋转数组的最小数字"><span class="toc-number">3.</span> <span class="toc-text">剑指Offer 11. 旋转数组的最小数字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#剑指Offer-12-矩阵中的路径"><span class="toc-number">4.</span> <span class="toc-text">剑指Offer 12. 矩阵中的路径</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -513,7 +640,7 @@
 		
 		
 		<i class="fas fa-chart-area"></i>
-		<span class="post-count">字数统计：68.5k</span>
+		<span class="post-count">字数统计：71.5k</span>
 		
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -635,19 +762,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -656,6 +771,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数论</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -671,10 +794,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">递推</a>
               </li>
              
@@ -683,11 +802,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">考研</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">链表</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
               </li>
              
               <li class="article-tag-list-item">
